@@ -1,6 +1,6 @@
 # Recursion Example
 
-```
+```nasm
 ;int fib(int n){
 ;    int answer;
 ;    if (n <= 1)
@@ -110,7 +110,8 @@ ADD R6, R6, -4
 ; Save Return Address
 STR R7, R6, 2 
 ; Save Old Frame Pointer
-STR R5, R6, 1 ;
+STR R5, R6, 1 
+; R6 + 0 is kept empty as its the local variable
 ; Set Frame Pointer to Stack Pointer
 ADD R5, R6, 0 
 
