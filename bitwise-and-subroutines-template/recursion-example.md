@@ -1,5 +1,7 @@
 # Recursion Example
 
+Below is a example of the fib sequence using recursion written in LC3 ASM.
+
 ```nasm
 ;int fib(int n){
 ;    int answer;

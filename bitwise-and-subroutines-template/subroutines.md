@@ -1,6 +1,6 @@
 # Subroutines
 
-## Stack Build Up Template
+## Stack Build Up Template (Callee)
 
 ```nasm
 ; Stack Build UP
@@ -22,7 +22,7 @@ STR R3, R5, #-4 ; save SR4
 STR R4, R5, #-5 ; save SR5
 ```
 
-## Stack Tear Down Template
+## Stack Tear Down Template (Callee)
 
 ```nasm
 ; Stack TearDOWN

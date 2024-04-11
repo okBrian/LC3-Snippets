@@ -1,10 +1,10 @@
 # Basic C
 
-This is kinda complicated so like don't worry if you don't understand.
+This is supplemental material fro when we learn C.&#x20;
 
-Some of these features aren't in Java, hidden under the garbage collector.&#x20;
+Some of these features aren't in Java, which are hidden under the garbage collector.&#x20;
 
-So heres C to ASM, I made all the C programs runnable too. Just use a C online compiler for now ig
+So here is C to ASM, I made all the C programs runnable too. Just use a C online compiler or the provided docker file from class
 
 ## Basic C Program Structure&#x20;
 
@@ -12,7 +12,6 @@ So heres C to ASM, I made all the C programs runnable too. Just use a C online c
 #include <stdio.h> // C Preproccesor that just includes the standard IO library
                    // Similar to doing 
                    // import java.util.ArrayList
-                   // or whatever 
                    // Can do alot more but lecture should cover this in detail
 
 int main() { // Entry point of program same as .orig x3000
@@ -41,7 +40,7 @@ Stack and Heap  can get kind of complicated, but the basics you need to know isn
 
 Stack
 
-* Auto deletes at end of program
+* Auto deletes at end of program like the stack of LC3
 * Usually shouldn't store anything big in stack as its somewhat limited
 * In C int a = 5; is in the stack and will auto delete at the end of the program
 * Stored in a specific area of memory and is stored in a stack like data structure so it is easily deleted after the program finishes.
@@ -57,7 +56,7 @@ If the data isn't freed it can cause a data leak where memory is allocated but n
 
 ## Pointers & Heap Memory Allocation&#x20;
 
-Pointers are just variables that point to another memory address. This is basically the LDI command.
+Pointers are just variables that point to another memory address. This is basically the LDI opcode.
 
 ```c
 #include <stido.h> // For printf
@@ -261,7 +260,7 @@ int main() {
     for (int i = 0; i < SIZE; i++) {
         arr[i] = i; 
         // arr[i] in a heap array is implicitly doing *(arr + i)
-        // its taking the memory address of arr adding it by 1 and dereferencing it
+        // its taking the memory address of arr adding it by i and dereferencing it
     }
     
     for (int i = 0; i < SIZE; i++) {
