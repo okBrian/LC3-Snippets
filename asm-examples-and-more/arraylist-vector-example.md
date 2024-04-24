@@ -106,4 +106,9 @@ void clear(struct IntVector* vector) {
   }
   vector->size = 0;
 }
+
+void shutdown(struct IntVector* vector) {
+  free(vector->backingArray);
+  free(vector);
+}
 </code></pre>
